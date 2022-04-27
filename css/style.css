@@ -3,3 +3,10 @@
     height: 300px;
     align-content: center;
 }
+
+@media (max-width: 600px) {
+    .token-input{
+        width: 200px;
+    }
+    
+}
