@@ -1,3 +1,21 @@
+#simboloCripto{
+    width: 4rem;
+    margin: 10px
+}
+
+.contenedor{
+    display: flex
+}
+
+.container-cotizaciones{
+    background-color: #2FDD92;
+}
+
+.form-group{
+    display: flex;
+    width: 200px;
+}
+
 .form{
    width: 100%;
     height: 300px;
@@ -11,6 +29,13 @@
     
 }
 
-.col{
-    height: 100px;
+.container{
+    width: 100%;
+    background-color: #2F86A6 ;
 }
+
+footer{
+    width: 100%;
+    background-color: #34BE82;
+}
+
