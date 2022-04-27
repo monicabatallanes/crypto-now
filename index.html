@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,6 +37,54 @@
       </div>
     </nav>
 
+    <form name="formulario" class="contendor">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="USD" checked> USD (Dólar)
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="ARS"> ARS (Peso)
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="EUR"> EUR (Euro)
+        </label>
+      </div>
+    
+      
+        
+        <div class="form-group">
+          <label for="Simbolo Cripto">Símbolo Cripto</label>
+          <input type="text" class="form-control" id="simboloCripto" aria-describedby="help">
+          <small id="help" class="form-text text-muted">Símbolo de la cripto a agregar</small>
+        </div>
+        
+        <button type="button" class="btn btn-primary" onclick="agregar()">Agregar Cripto</button>
+        <button type="button" class="btn btn-primary" onclick="refrescar()">Refrescar Cotización</button>
+    
+      </form>
+    
+        <h1 class= "titulo" >Hackathon Covalent-Rolling Code School</h1>
+        <h2>CryptoNow - Cotizaciones de Cripto Monedas</h2>
+        <section class="container">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>  
+                <th scope="col">Imagen</th>
+                <th scope="col">Simbolo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cotización</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">
+             
+            </tbody>
+          </table>
+            <div>            
+            </div>
+        </section>
+        
+        
+
 
 
     
@@ -44,3 +93,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+    
+    
