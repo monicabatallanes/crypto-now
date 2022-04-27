@@ -5,6 +5,7 @@ const getData1 = async(simbolo,moneda) =>{
     const resp = await fetch(endpoint)
     const json = await resp.json()
     datos = json.data.items
+
     if(datos.length>0) {
     const tabla = document.getElementById('tabla') 
     let row = document.createElement('tr');
@@ -28,21 +29,22 @@ const getData1 = async(simbolo,moneda) =>{
       }
       else{window.alert('No Existe el Símbolo en API Covalent')}
 }
+
 function agregar(){
-let i=crypto_mendas.length
-if (document.getElementById('simboloCripto').value.trim() !=""){
-crypto_mendas[i]=document.getElementById('simboloCripto').value
-document.getElementById('simboloCripto').value = ''
-let moneda='USD'
-if (document.formulario.options[0].checked){
+  let i=crypto_mendas.length
+  if (document.getElementById('simboloCripto').value.trim() !=""){
+  crypto_mendas[i]=document.getElementById('simboloCripto').value
+  document.getElementById('simboloCripto').value = ''
+  let moneda='USD'
+  if (document.formulario.options[0].checked){
   moneda='USD'
-}
-else {  
+  }
+  else {  
   if(document.formulario.options[1].checked){
       moneda='ARS'
   }
   else{ moneda='EUR'}
-}
+  }
 
 getData1(crypto_mendas[i], moneda)
 }}
@@ -84,9 +86,6 @@ const calcular = async() =>{
   const token1 = tokenUno.value
   const token2 = tokenDos.value
 
-    console.log(token1)
-    console.log(token2)
- 
   let dividendo = 0
   dividendo = await calculate(token1)
   let divisor = 0
