@@ -59,3 +59,44 @@ for(let i=0;i < crypto_mendas.length;i++)
   getData1(crypto_mendas[i],'USD')
 }
 
+
+const calculate = async(simbolo) =>{
+    
+  const resp = await fetch(`https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=${simbolo}&key=ckey_5b6fbe329c714404ae706e3d444`)
+  const json = await resp.json()
+
+  let precio = 0 
+
+  const valorBuscado = (json.data.items).map(valor => precio = valor.quote_rate)
+
+  return precio
+ 
+}
+
+const calcular = async() =>{
+  const tokenUno = document.getElementById('token-1')
+  const tokenDos = document.getElementById('token-2')
+  const cantidadUno = document.getElementById('cantidad-1')
+  const cantidadDos = document.getElementById('cantidad-2')
+  const cambio = document.getElementById('cambio')
+  const taza = document.getElementById('taza')
+
+  const token1 = tokenUno.value
+  const token2 = tokenDos.value
+
+    console.log(token1)
+    console.log(token2)
+ 
+  let dividendo = 0
+  dividendo = await calculate(token1)
+  let divisor = 0
+  divisor = await calculate(token2)
+
+  let resultado = (dividendo/divisor) * cantidadUno.value
+
+  cantidadDos.setAttribute("value", resultado);
+
+}
+
+
+
