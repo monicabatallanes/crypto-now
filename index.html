@@ -18,21 +18,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand text-black" href="#">Crypto Now</a>
+          <a class="navbar-brand text-black" href="#">
+            <img src="./assets/colors-palet/imagen-logo/logo.png" alt="logo-proyecto" width="60" height="50" class="rounded-circle">
+          </a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-black" aria-current="page" href="#">Pizarra</a>
+              <a class="nav-link active text-black" aria-current="page" href="#cotizaciones">Pizarra</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-black" href="#">Convertidor</a>
+              <a class="nav-link text-black" href="#conversor">Conversor</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     
-    <section>
-        <form name="formulario" class="contendor">
+    <section >
+        <form name="formulario" class="contendor d-flex flex-column align-items-center justify-content-center mt-3">
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
               <input type="radio" name="options" id="USD" checked> USD (Dólar)
@@ -45,20 +47,23 @@
             </label>
           </div>
         
-          <div class="form-group">
-              <label for="Simbolo Cripto">Símbolo Cripto</label>
-              <input type="text" class="form-control" id="simboloCripto" aria-describedby="help">
-              <small id="help" class="form-text text-muted">Símbolo de la cripto a agregar</small>
+          <div class="form-group d-flex justify-content-center row">
+              <label class="col-label text-center" for="Simbolo Cripto">Símbolo Cripto</label>
+              <input type="text" class="form-control col" id="simboloCripto" aria-describedby="help">
+              <small id="help" class="form-text text-muted ">Símbolo de la cripto a agregar</small>
           </div>
+          <div class="botones row">
+            <button type="button" class="btn btn-primary btn-sm col " onclick="agregar()">Agregar Cripto</button>
+            <button type="button" class="btn btn-primary btn-sm col" onclick="refrescar()">Refrescar Cotización</button>
+
+          </div> 
             
-            <button type="button" class="btn btn-primary" onclick="agregar()">Agregar Cripto</button>
-            <button type="button" class="btn btn-primary" onclick="refrescar()">Refrescar Cotización</button>
         
         </form>
         
-          <h2>CryptoNow - Cotizaciones de Cripto Monedas</h2>
+          <h1 class="titulo-cotizaciones m-5 text-center" id="cotizaciones">CryptoNow - Cotizaciones de Cripto Monedas</h1>
             
-          <section class="container">
+          <section class="container-cotizaciones">
               <table class="table">
                 <thead class="thead-dark">
                   <tr>  
@@ -77,10 +82,10 @@
 
       </section>
 
-      <section class="convertidor d-flex flex-column align-items-center justify-content-center">
+      <section class="convertidor  d-flex flex-column align-items-center justify-content-center">
 
-        <h2>Conversor de tokens</h2>
-        <p class="titulo-conversor text-align-center">Elige el token y la cantidad para hacer la conversion</p>
+        <h2 class="titulo-conversor mt-5 mb-5" >Conversor de tokens</h2>
+        <p class="titulo-conversor text-align-center" id="conversor">Elige el token y la cantidad para hacer la conversion</p>
   
         <div class="container d-flex flex-column align-items-center justify-content-center">
           <div class="token py-2 ">
@@ -93,15 +98,15 @@
               <option value="AVAX" >AVAX</option>
               <option value="UST" >UST</option>
               <option value="BUSD" >BUSD</option>
-              <option value="SHIB" >SHIB</option> 
+              <option value="SHIB" >SHIB</option>
+              <option value="USDT" >USDT</option>
+
             </select>
             <input class="input" type="number" id="cantidad-1" placeholder="0" value="1">
           </div>
   
           <div class="taza-cambio">
             <button class="btn btn-success br-2 m-2" onclick="calcular()"   id="taza">Cambio</button>
-            <div class="cambio" id="cambio"></div>
-  
           </div>
           
           <div class="token py-2 ">
@@ -114,7 +119,8 @@
               <option value="AVAX" >AVAX</option>
               <option value="UST" >UST</option>
               <option value="BUSD" >BUSD</option>
-              <option value="SHIB" >SHIB</option> 
+              <option value="SHIB" >SHIB</option>
+              <option value="USDT" >USDT</option> 
             </select>
             <input  class="input " type="number" id="cantidad-2" placeholder="0" >
   
@@ -125,22 +131,20 @@
       </section>
       
       <footer class="mt-5 ">
-       <section class="container row  w-100 bg-black">
+       <section class="container-footer row ">
          
-          <div class="col  text-start pt-3">
-            <h5 class="text-white">&copy Todos los derechos reservados</h5>
+          <div class="col  text-start pt-3 mx-3">
+            <h6 class="text-white">&copy Todos los derechos reservados</h6>
             <img src="./assets/colors-palet/imagen-logo/logo-covalent-500.png" alt="logo-covalent" width="80px">
             <img src="./assets/colors-palet/imagen-logo/logo-rollingcode.png" alt="logo-rollingcode" width="80px">
           </div> 
            
-          <div class="col text-end">
-            <h5 class="fuenteAlumi text-white" >Miembros del grupo</h5>
+          <div class="col text-center">
+            <h6 class=" text-white" >Miembros del grupo</h6>
               <h6>Mónica Batallanes</h6>
               <h6>Marcelo Boscarino</h6>
               <h6>Ricardo Gauna</h6>
-              <img src="" alt="logo de facebook "width="50px">
-              <img src="" alt="logo de instagram"  width="50px">
-              <img src="" alt="logo de twitter"width="50px">      
+                 
           </div>
        
        </section>
