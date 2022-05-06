@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +11,7 @@
   
   <body>
 
-    <nav class="navbar navbar-expand bg-success  text-black bg-opacity-75">
+    <nav class="navbar navbar-expand text-black bg-opacity-75">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -21,12 +20,12 @@
           <a class="navbar-brand text-black" href="#">
             <img src="./assets/colors-palet/imagen-logo/logo.png" alt="logo-proyecto" width="60" height="50" class="rounded-circle">
           </a>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
             <li class="nav-item">
-              <a class="nav-link active text-black" aria-current="page" href="#cotizaciones">Pizarra</a>
+              <a class="nav-link active text-black fs-5 m-2 p-2 " aria-current="page" href="#cotizaciones">Pizarra</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-black" href="#conversor">Conversor</a>
+              <a class="nav-link text-black fs-5 m-2 p-2" href="#conversor">Conversor</a>
             </li>
           </ul>
         </div>
@@ -46,25 +45,21 @@
               <input type="radio" name="options" id="EUR"> EUR (Euro)
             </label>
           </div>
-        
           <div class="form-group d-flex justify-content-center row">
-              <label class="col-label text-center" for="Simbolo Cripto">Símbolo Cripto</label>
-              <input type="text" class="form-control col" id="simboloCripto" aria-describedby="help">
-              <small id="help" class="form-text text-muted ">Símbolo de la cripto a agregar</small>
+              <label class="col-label text-center mt-3" for="Simbolo Cripto">Símbolo de la Cripto a agregar</label>
+              <input type="text" class="form-control col" id="simboloCripto" aria-describedby="help" placeholder="Símbolo cripto">
           </div>
-          <div class="botones row">
+          <div class="botones row d-grid gap-2 d-flex justify-content-center">
             <button type="button" class="btn btn-primary btn-sm col " onclick="agregar()">Agregar Cripto</button>
             <button type="button" class="btn btn-primary btn-sm col" onclick="refrescar()">Refrescar Cotización</button>
-
           </div> 
-            
-        
+          
         </form>
         
-          <h1 class="titulo-cotizaciones m-5 text-center" id="cotizaciones">CryptoNow - Cotizaciones de Cripto Monedas</h1>
+          <h1 class="titulo-cotizaciones mt-5 mb-2 text-center" id="cotizaciones"> Cotizaciones de Cripto Monedas</h1>
             
           <section class="container-cotizaciones">
-              <table class="table">
+              <table class="table p-3">
                 <thead class="thead-dark">
                   <tr>  
                     <th scope="col">Imagen</th>
@@ -79,13 +74,14 @@
               </table>
                 <div>            
                 </div>
+          </section>
 
-      </section>
+    </section>
 
       <section class="convertidor  d-flex flex-column align-items-center justify-content-center">
 
-        <h2 class="titulo-conversor mt-5 mb-5" >Conversor de tokens</h2>
-        <p class="titulo-conversor text-align-center" id="conversor">Elige el token y la cantidad para hacer la conversion</p>
+        <h2 class="titulo-conversor mt-5 mb-3" >Conversor de tokens</h2>
+        <p class="titulo-conversor text-align-center p-2" id="conversor">Elige el token y la cantidad para hacer la conversion</p>
   
         <div class="container d-flex flex-column align-items-center justify-content-center">
           <div class="token py-2 ">

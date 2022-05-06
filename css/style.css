@@ -1,3 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#E8F6EF ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+}
+
+nav{
+    background-color: #2F86A6;
+}
+
 #simboloCripto{
     width: 4rem;
     margin: 10px
@@ -9,6 +24,7 @@
 
 .container-cotizaciones{
     background-color: #2FDD92;
+    
 }
 
 .form-group{
@@ -26,7 +42,6 @@
     .token-input{
         width: 200px;
     }
-    
 }
 
 .container{
