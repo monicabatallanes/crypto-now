@@ -45,22 +45,35 @@ function agregar(){
   }
   else{ moneda='EUR'}
   }
-
-getData1(crypto_mendas[i], moneda)
+  monedas[i]=moneda
+getData1(crypto_mendas[i], monedas[i])
 }}
 
 function refrescar(){
-location.reload()
-}
-
-let datos
-const crypto_mendas = ['btc','eth','usdt', 'usdc']
-
-for(let i=0;i < crypto_mendas.length;i++)
-{
-  getData1(crypto_mendas[i],'USD')
-}
-
+  const elemento = document.querySelector("#tabla")
+  elemento.innerHTML = ""
+  llenar()
+  }
+  
+  function limpiar(){
+    const elemento = document.querySelector("#tabla")
+    elemento.innerHTML = ""
+    crypto_mendas.length = 0
+    monedas.length = 0
+  }
+  
+  let datos
+  const crypto_mendas = ['btc','eth','usdt', 'usdc']
+  const monedas = ['USD', 'USD', 'USD', 'USD' ]
+  llenar()
+  
+  function llenar()
+  {
+  for(let i=0;i < crypto_mendas.length;i++)
+  {
+    getData1(crypto_mendas[i],monedas[i])
+  }
+  }
 
 const calculate = async(simbolo) =>{
     
