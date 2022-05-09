@@ -17,6 +17,9 @@ nav{
     width: 4rem;
     margin: 10px
 }
+.botones{
+    --bs-gutter-x: 0.5rem;
+}
 
 .contenedor{
     display: flex
