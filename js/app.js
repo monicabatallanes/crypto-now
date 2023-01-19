@@ -1,6 +1,6 @@
 const getData1 = async(simbolo,moneda) =>{
     
-  const endpoint = `https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=${moneda}&format=JSON&tickers=${simbolo}&key=ckey_21be25f5c33d41c58c22cf020ab`
+  const endpoint = `https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=${moneda}&format=JSON&tickers=${simbolo}&key=ckey_75fa9444881f4b079063e17be17`
   
   const resp = await fetch(endpoint)
   const json = await resp.json()
@@ -77,7 +77,7 @@ for(let i=0;i < crypto_mendas.length;i++)
 
 const calculate = async(simbolo) =>{
     
-  const resp = await fetch(`https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=${simbolo}&key=ckey_5b6fbe329c714404ae706e3d444`)
+  const resp = await fetch(`https://api.covalenthq.com/v1/pricing/tickers/?quote-currency=USD&format=JSON&tickers=${simbolo}&key=ckey_75fa9444881f4b079063e17be17`)
   const json = await resp.json()
 
   let precio = 0 
